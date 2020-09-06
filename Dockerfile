@@ -17,10 +17,9 @@ LABEL io.k8s.description="Test s2i demo image" \
 # RUN yum install -y ... && yum clean all -y
 ENV DOCROOT /var/www/html
 
-RUN yum install -y --nodocs --disableplugin=subscription-manager httpd && \
+RUN yum install -y --disableplugin=subscription-manager httpd && \
   yum clean all --disableplugin=subscription-manager -y && \
-  echo "This is the default index page from the s2i-do288-httpd S2I builder
-  image." > ${DOCROOT}/index.html
+  echo "This is the default index page from the s2i-do288-httpd S2I builder image." > ${DOCROOT}/index.html
 
 # Change web server port to 8080
 RUN sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
