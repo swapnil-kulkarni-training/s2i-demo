@@ -11,8 +11,8 @@ FROM openshift/base-centos7
 LABEL io.k8s.description="Test s2i demo image" \
       io.k8s.display-name="s2i-demo" \
       io.openshift.expose-services="8080:http" \
-      io.openshift.tags="demo" \
-      io.openshift.s2i.scripts-url="image:///usr/libexec/s2i"
+      io.openshift.tags="demo"
+#       io.openshift.s2i.scripts-url="image:///usr/libexec/s2i"
 
 # TODO: Install required packages here:
 # RUN yum install -y ... && yum clean all -y
