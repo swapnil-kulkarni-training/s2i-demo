@@ -5,7 +5,7 @@ FROM openshift/base-centos7
 # LABEL maintainer="Your Name <your@email.com>"
 
 # TODO: Rename the builder environment variable to inform users about application you provide them
-# ENV BUILDER_VERSION 1.0
+ENV BUILDER_VERSION 1.0
 
 # TODO: Set labels used in OpenShift to describe the builder image
 LABEL io.k8s.description="Test s2i demo image" \
